@@ -1,0 +1,56 @@
+/* Theme Name: my_custom_theme
+    Author: Romanjan_Das
+*/
+:root{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 18px;
+}
+body{
+    background-color: lightgrey;
+    margin: 0rem;
+}
+header{
+    position: fixed;
+    top: 0rem;
+    background-color: slategrey;
+    width: 100%;
+    height: 3.1rem;
+    font-size: 1rem;
+    overflow: visible;
+}
+.container{
+    padding: 1rem;
+}
+img{
+    width: 20rem;
+}
+#menu-primary{
+    margin: 0px;
+}
+#menu-primary>li{
+    list-style-type: none;
+    padding: 1rem 0rem 1rem 0rem;
+}
+#menu-primary>li>a{
+    color: white;
+    text-decoration: none;
+}
+.header_title{
+    display: flex;
+    width: 100%;
+    height: 3.1rem;
+    /*
+    justify-content: center;
+    */
+    align-items: center;
+    color: white;
+    padding: 0rem 0rem 0rem 2rem;
+    box-sizing:border-box;
+}
+.nav_icon{
+    position: absolute;
+    right: 1rem;
+    height: 1.5rem;
+    width: 1.5rem;
+    background-color: black;
+}
