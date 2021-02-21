@@ -1,11 +1,16 @@
 <?php get_header(); ?>
 
     <div class="container">
-        <h1>What is Lorem Ipsum?</h1>
-        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-
-
-        <?php if(have_posts()):while(have_posts()):the_post();?><a href="<?php the_permalink();?>"><h1><?php the_title();?></h1></a><?php endwhile;endif; ?>
+        <?php if(have_posts()):
+            while(have_posts()):
+            the_post();?>
+            <a href="<?php the_permalink();?>">
+            <div class="front-page-posts">
+            <img src="<?php if(has_post_thumbnail()):the_post_thumbnail_url(); endif;?>" alt="">
+            <div class="front-page-post-title"><?php the_title();?></div>
+            <div class="front-page-post-excerpt"><?php the_excerpt();?></div>
+        
+        </div></a><?php endwhile;endif; ?>
     </div>
 
 <?php get_footer(); ?>
