@@ -2,9 +2,36 @@
     Author: Romanjan_Das
 */
 :root{
+    --moving_text_100: 0px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 18px;
 }
+/*--------------------------------------------------------------------*/
+.moving_text_container {
+    width: 100%;
+    /*container width and left must be same*/
+    height: 8vw;
+    overflow: hidden;
+}
+
+.moving_text {
+    position: relative;
+    height: inherit;
+    animation: moving_text_animation 10s infinite;
+    animation: moving_text_animation 30s linear 0s infinite normal none;
+}
+
+@keyframes moving_text_animation {
+    0% {
+        left: 100%;
+    }
+
+    /*container width and left must be same*/
+    100% {
+        left: var(--moving_text_100);
+    }
+}
+/*-------------------------------------------------------------------------------------*/
 body{
     background-color: gainsboro;
     margin: 0rem;
