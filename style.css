@@ -8,10 +8,14 @@
 }
 /*--------------------------------------------------------------------*/
 .moving_text_container {
+    position: relative;
+    z-index: -1;
     width: 100%;
     /*container width and left must be same*/
-    height: 8vw;
+    height: 1.6rem;
+    margin-bottom: 0.8rem;
     overflow: hidden;
+    background-color: white;
 }
 
 .moving_text {
