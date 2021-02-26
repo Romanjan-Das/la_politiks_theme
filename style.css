@@ -36,6 +36,39 @@
     }
 }
 /*-------------------------------------------------------------------------------------*/
+
+.image_carousel{
+    position: absolute;
+    height: inherit;
+    width: inherit;
+    padding: 0px;
+    box-sizing: border-box;
+    overflow: scroll;
+}
+.image_carousel::-webkit-scrollbar{
+    display: none;
+}
+.image_carousel>div{
+    height: inherit;
+}
+.image_carousel>div>div{
+    margin-right: 0.2%;
+    height: inherit;
+    float: left;
+}
+.image_carousel>div>div>img{
+    height: 80%;
+}
+.image_carousel>div>div>div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: inherit;
+    height: 15%;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+/*-------------------------------------------------------------------------------------*/
 body{
     background-color: gainsboro;
     margin: 0rem;

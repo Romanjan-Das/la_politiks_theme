@@ -17,14 +17,14 @@
                 <img class="slides" src="<?php echo get_template_directory_uri(); ?>/images/slide(5).jpg" alt="">
             </div>
             <div class="slide_controls">
-                <div class="slide_control_icon"><img class="slide_control_icon_img" src="<?php echo get_template_directory_uri(); ?>/images/slide_left_img.svg"
-                        alt=""></div>
+                <div class="slide_control_icon"><img class="slide_control_icon_img"
+                        src="<?php echo get_template_directory_uri(); ?>/images/slide_left_img.svg" alt=""></div>
                 <div class="slide_control_pointer_bar">
                     <div class="slide_control_pointer_container">
                     </div>
                 </div>
-                <div class="slide_control_icon"><img class="slide_control_icon_img" src="<?php echo get_template_directory_uri(); ?>/images/slide_right_img.svg"
-                        alt=""></div>
+                <div class="slide_control_icon"><img class="slide_control_icon_img"
+                        src="<?php echo get_template_directory_uri(); ?>/images/slide_right_img.svg" alt=""></div>
             </div>
         </div>
         <!---------------------------------------------------------------------------------------------------->
@@ -44,9 +44,34 @@
     <!------------------------------------------------------------------------------------------------------>
 
 
+    <!------------------------------------------------------------------------------------------------------>
+    <div style="position: relative; z-index: 0; width: 100%; height: 40vw; font-size: 0.6rem; background-color: white">
+        <div class="image_carousel">
+            <div>
+                <div><img src="<?php echo get_template_directory_uri(); ?>/images/slide(1).jpg" alt="">
+                    <div>Lorem Ipsum is simply dummy text</div>
+                </div>
+                <div><img src="<?php echo get_template_directory_uri(); ?>/images/slide(2).jpg" alt="">
+                    <div>Lorem Ipsum is simply dummy text</div>
+                </div>
+                <div><img src="<?php echo get_template_directory_uri(); ?>/images/slide(3).jpg" alt="">
+                    <div>Lorem Ipsum is simply dummy text</div>
+                </div>
+                <div><img src="<?php echo get_template_directory_uri(); ?>/images/slide(4).jpg" alt="">
+                    <div>Lorem Ipsum is simply dummy text</div>
+                </div>
+                <div><img src="<?php echo get_template_directory_uri(); ?>/images/slide(5).jpg" alt="">
+                    <div>Lorem Ipsum is simply dummy text</div>
+                </div>
+                <div><img src="<?php echo get_template_directory_uri(); ?>/images/slide(6).jpg" alt="">
+                    <div>Lorem Ipsum is simply dummy text</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-------------------------------------------------------------------------------------------------------->
 
 
-    
     <?php if(have_posts()):
             while(have_posts()):
             the_post();?>
