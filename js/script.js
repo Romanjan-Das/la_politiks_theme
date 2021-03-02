@@ -25,10 +25,16 @@ var nav_menu_status = false;
 function expand_nav_menu() {
     var header = document.getElementsByTagName("header")[0];
     if (!nav_menu_status) {
+        document.getElementsByClassName("the_slideshow_container")[0].style.zIndex=-1;
+        document.getElementsByClassName("moving_text_container")[0].style.zIndex=-1;
+        document.getElementsByClassName("image_carousel_container")[0].style.zIndex=-1;
         header.style.height = "auto";
         nav_menu_status = true;
     }
     else if (nav_menu_status) {
+        document.getElementsByClassName("the_slideshow_container")[0].style.zIndex=0;
+        document.getElementsByClassName("moving_text_container")[0].style.zIndex=0;
+        document.getElementsByClassName("image_carousel_container")[0].style.zIndex=0;
         header.style.height = "3.1rem";
         nav_menu_status = false;
     }

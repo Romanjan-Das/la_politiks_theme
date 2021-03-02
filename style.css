@@ -9,7 +9,7 @@
 /*--------------------------------------------------------------------*/
 .moving_text_container {
     position: relative;
-    z-index: -1;
+    z-index: 0;
     width: 100%;
     /*container width and left must be same*/
     height: 1.6rem;
@@ -36,7 +36,9 @@
     }
 }
 /*-------------------------------------------------------------------------------------*/
-
+.image_carousel_container{
+    position: relative; z-index: 0; width: 100%; height: 40vw; font-size: 0.6rem; background-color: white;
+}
 .image_carousel{
     position: absolute;
     height: inherit;
@@ -149,9 +151,10 @@ header::-webkit-scrollbar{
     color: grey;
 }
 .the_slideshow_container{
-    z-index: -1;
+    z-index: 0;
     position: relative;
     width:100%;
     height:70vw;
     background-color:gainsboro;
 }
+

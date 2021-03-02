@@ -45,7 +45,7 @@
 
 
     <!------------------------------------------------------------------------------------------------------>
-    <div style="position: relative; z-index: 0; width: 100%; height: 40vw; font-size: 0.6rem; background-color: white">
+    <div class="image_carousel_container">
         <div class="image_carousel">
             <div>
                 <div><img src="<?php echo get_template_directory_uri(); ?>/images/slide(1).jpg" alt="">
