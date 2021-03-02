@@ -114,20 +114,35 @@ header::-webkit-scrollbar{
     display: flex;
     width: 100%;
     height: 3.1rem;
-    /*
-    justify-content: center;
-    */
     align-items: center;
     color: white;
-    padding: 0rem 0rem 0rem 2rem;
+    padding: 0rem 0rem 0rem 0rem;
     box-sizing:border-box;
+}
+.header_title_text{
+    position: absolute;
+    top: 0.7rem;
+    left: 31vw
+}
+.header_title>img{
+    position: absolute;
+    top: 0px;
+    height: 3.1rem;
+    width: 3.1rem;
+    right: 3.5rem;
+}
+.header_title>img:nth-child(1){
+    left: 0px;
 }
 .nav_icon{
     position: absolute;
     right: 1rem;
     height: 1.5rem;
     width: 1.5rem;
-    background-color: black;
+}
+.nav_icon>img{
+    height: 100%;
+    width: 100%;
 }
 .front-page-posts{
     background-color: white;

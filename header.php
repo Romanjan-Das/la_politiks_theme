@@ -37,7 +37,14 @@
 </head>
 <body <?php body_class(); ?>>
 <header>
-    <div class="header_title"><span>La Politiks</span><div class="nav_icon"></div></div>
+    <div class="header_title">
+        <img src="<?php echo get_template_directory_uri();?>/images/academic_logo_1.jpg" alt="">
+        <div class="header_title_text">La Politiks</div>
+        <img src="<?php echo get_template_directory_uri();?>/images/academic_logo_2.jpg" alt="">
+        <div class="nav_icon">
+            <img src="<?php echo get_template_directory_uri();?>/images/hamburger_icon.svg" alt="">
+        </div>
+    </div>
     <?php
         wp_nav_menu(
             array(
