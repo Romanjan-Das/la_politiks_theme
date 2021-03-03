@@ -183,3 +183,28 @@ header::-webkit-scrollbar{
     background-color:gainsboro;
 }
 
+/*------------------------------------------------------------------------------------*/
+.single-post{
+    background-color: white;
+    padding-bottom: 4rem;
+}
+.single-post-image{
+    width: 100%;
+}
+figure>img{
+    width: 100%;
+    height: auto;
+}
+h1{
+    font-size: 1.6rem;
+}
+p{
+    font-size: 1rem;
+}
+strong{
+    font-size: 1.1rem;
+}
+/*-----------------------------------------------------------------------------------*/
+.individual-page{
+    background-color: white;
+}
