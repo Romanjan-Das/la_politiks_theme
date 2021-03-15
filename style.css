@@ -184,11 +184,11 @@ header::-webkit-scrollbar{
 }
 
 /*------------------------------------------------------------------------------------*/
-.single-post{
+.single-postt{
     background-color: white;
-    padding-bottom: 4rem;
+    padding: 6vw 6vw 6vw 6vw;
 }
-.single-post-image{
+.single-postt-image{
     width: 100%;
 }
 figure>img{
@@ -207,4 +207,133 @@ strong{
 /*-----------------------------------------------------------------------------------*/
 .individual-page{
     background-color: white;
+}
+.separator{
+    display: none;
+}
+
+
+@media (orientation: landscape) {
+    html{
+        overflow-x: hidden;
+    }
+    header{
+        position: absolute;
+        height: 17vw;
+        width: 100vw;
+        box-sizing: border-box;
+    }
+    .header_title{
+        width: 100vw;
+        height: 13vw;
+        color: white;
+        box-sizing:border-box;
+    }
+    .header_title>img{
+        position: absolute;
+        top: 0px;
+        height: 13vw;
+        width: 13vw;
+        right: 20px;
+    }
+    .header_title>img:nth-child(1){
+        left: 0px;
+    }
+    .header_title_text{
+        width: 70vw;
+        height: 13vw;
+        font-size: 3.5rem;
+    }
+    .header_title_text>div{
+        display: flex;
+        height: 12vw;
+        align-items: center;
+        justify-content: center;
+        
+    }
+    .nav_icon{
+        display: none;
+    }
+    #menu-primary{
+        width: 90vw;
+        margin: 0px;
+        list-style: none;
+        box-sizing: border-box;
+        display: flex;
+        justify-content: center;
+    }
+    #menu-primary>li{
+        margin-left: 3vw;
+        display: inline;
+    }
+    .container{
+        padding: 2vw;
+        margin-top: 3.1rem;
+        width: 100vw;
+        box-sizing: border-box;
+    }
+    .the_slideshow_container{
+        z-index: 0;
+        position: relative;
+        width:30vw;
+        height:auto;
+        margin-top: 14vw;
+        background-color:gainsboro;
+    }
+    .front-page-posts{
+        width: 28vw;
+        height: 45vw;
+        margin: 1vw;
+        float: left;
+
+    }
+    .image_carousel_container{
+        position: absolute;
+        top: 25vw;
+        left: 35vw;
+        width: 55vw;
+        height: 30vh;
+        font-size: 0.8rem;
+    }
+    .image_carousel::-webkit-scrollbar{
+        display: inline;
+    }
+    .image_carousel{
+        position: absolute;
+        height: 99%;
+        width: inherit;
+        padding: 0px;
+        box-sizing: border-box;
+        overflow: scroll;
+    }
+    .moving_text_container {
+        position: absolute;
+        top: 18.5vw;
+        left: 35vw;
+        z-index: 0;
+        width: 55vw;
+        /*container width and left must be same*/
+        height: 1.6rem;
+        margin-bottom: 0.8rem;
+        overflow: hidden;
+        background-color: white;
+        margin: 0px;
+        margin-top: 2vw;
+        margin-bottom: 2vw;
+    }
+    .separator{
+        width: 80vw;
+        height: 5vw;
+        display: block;
+    }
+    .single-postt{
+        padding: 10vw 20vw 10vw 20vw;
+        width: 100vw;
+        box-sizing: border-box;
+    }
+    .individual-page{
+        width: 100vw;
+        padding: 20vw 20vw 10vw 20vw;
+        box-sizing: border-box;
+    }
 }
