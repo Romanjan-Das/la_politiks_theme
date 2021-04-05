@@ -72,7 +72,7 @@
 }
 /*-------------------------------------------------------------------------------------*/
 body{
-    background-color: gainsboro;
+    background-color: white;
     margin: 0rem;
 }
 header{
@@ -215,17 +215,18 @@ strong{
 
 @media (orientation: landscape) {
     header{
-        position: absolute;
-        top: 0px;
-        left: 0px;
-        height: 17vw;
-        width: 100vw;
+        position: relative;
+        margin: auto;
+        height: auto;
+        width: 100%;
+        overflow: hidden;
         box-sizing: border-box;
     }
     .header_title{
         width: 100vw;
         height: 13vw;
-        color: white;
+        color: darkslategrey;
+        background-color: white;
         box-sizing:border-box;
     }
     .header_title>img{
@@ -233,7 +234,7 @@ strong{
         top: 0px;
         height: 13vw;
         width: 13vw;
-        right: 20px;
+        right: 0px;
     }
     .header_title>img:nth-child(1){
         left: 0px;
@@ -253,43 +254,85 @@ strong{
     .nav_icon{
         display: none;
     }
+    .menu-primary-container{
+        background-color: darkslategrey;
+        width: 100vw;
+        height: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
     #menu-primary{
-        width: 90vw;
+        width: auto;
         margin: 0px;
         list-style: none;
         box-sizing: border-box;
         display: flex;
         justify-content: center;
+        background-color: darkslategrey;
+    }
+    .navigation{
+        padding: 0px;
     }
     #menu-primary>li{
-        margin-left: 3vw;
-        display: inline;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: 1.5vw;
+        margin-right: 1.5vw;
+        height: inherit;
+        box-sizing: border-box;
+    }
+    #menu-primary>li>a{
+        font-size: 18px;
+    }
+    #menu-primary>li>a:hover{
+        color: skyblue;
     }
     .container{
+        position: relative;
+        left: 0px;
         padding: 2vw;
-        margin-top: 3.1rem;
-        width: 100vw;
+        padding-top: 5vw;
+        margin: auto;
+        width: 75%;
+        height: 1000vw;
         box-sizing: border-box;
+        box-shadow: 0px 0px 1vw gainsboro;
+    }
+    @media only screen and (max-width: 1300px) {
+        .container{
+            width: 85%;
+        }
+    }
+    @media only screen and (max-width: 1000px) {
+        .container{
+            width: 100%;
+        }
     }
     .the_slideshow_container{
         z-index: 0;
         position: relative;
-        width:30vw;
+        width:50vw;
         height:auto;
-        margin-top: 14vw;
+        margin: auto;
         background-color:gainsboro;
+        box-shadow: 0px 0px 2vw gainsboro;
     }
     .front-page-posts{
-        width: 28vw;
+        width: 48%;
+        margin-left:1%;
         height: 45vw;
-        margin: 1vw;
+        padding: 1vw;
+        box-sizing: border-box;
         float: left;
-
+    }
+    .front-page-posts:hover{
+        box-shadow: 0px 0px 2vw gainsboro;
     }
     .image_carousel_container{
-        position: absolute;
-        top: 25vw;
-        left: 35vw;
+        display: none;
+        position: relative;
         width: 55vw;
         height: 30vh;
         font-size: 0.8rem;
@@ -299,16 +342,15 @@ strong{
     }
     .image_carousel{
         position: absolute;
-        height: 99%;
+        height: 90%;
         width: inherit;
         padding: 0px;
         box-sizing: border-box;
         overflow: scroll;
     }
     .moving_text_container {
-        position: absolute;
-        top: 18.5vw;
-        left: 35vw;
+        display: none;
+        position: relative;
         z-index: 0;
         width: 55vw;
         /*container width and left must be same*/
