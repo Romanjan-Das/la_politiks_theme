@@ -74,10 +74,32 @@
 
 
     <div class="separator"></div>
+    <div class="category_selector">
+        <form action="" method="get"><input class="category_select_value" type="text" name="category_value" id="" value=""><input type="submit" value="All"></form>
+        <form action="" method="get"><input class="category_select_value" type="text" name="category_value" id="" value="Faculty"><input type="submit" value="Faculty"></form>
+        <form action="" method="get"><input class="category_select_value" type="text" name="category_value" id="" value="Guest"><input type="submit" value="Guest"></form>
+        <form action="" method="get"><input class="category_select_value" type="text" name="category_value" id="" value="Students"><input type="submit" value="Students"></form>
+    </div>
+    <div class="separator"></div>
+    <?php
+    $category_name='Guest';
+    if($_SERVER['REQUEST_METHOD']=='GET'){
+        $category_name=$_GET['category_value'];
+    }
+    ?>
+    <?php
+    $args = array(
+        'post_type'=>'post',
+        'post_status'=>'publish',
+        'category_name'=>$category_name,
+    );
+    $the_query=new WP_Query($args);
 
-    <?php if(have_posts()):
-            while(have_posts()):
-            the_post();?>
+    ?>
+
+    <?php if($the_query->have_posts()):
+            while($the_query->have_posts()):
+            $the_query->the_post();?>
     <a href="<?php the_permalink();?>">
         <div class="front-page-posts">
             <img src="<?php if(has_post_thumbnail()):the_post_thumbnail_url(); endif;?>" alt="">
