@@ -74,11 +74,12 @@
 
 
     <div class="separator"></div>
+    <div class="select_a_category">Select a category</div>
     <div class="category_selector">
-        <form action="" method="get"><input class="category_select_value" type="text" name="category_value" id="" value=""><input type="submit" value="All"></form>
-        <form action="" method="get"><input class="category_select_value" type="text" name="category_value" id="" value="Faculty"><input type="submit" value="Faculty"></form>
-        <form action="" method="get"><input class="category_select_value" type="text" name="category_value" id="" value="Guest"><input type="submit" value="Guest"></form>
-        <form action="" method="get"><input class="category_select_value" type="text" name="category_value" id="" value="Students"><input type="submit" value="Students"></form>
+        <form action="" method="get"><input class="category_select_value" type="text" name="category_value" id="" value=""><input class="cat_button" type="submit" value="All"></form>
+        <form action="" method="get"><input class="category_select_value" type="text" name="category_value" id="" value="Faculty"><input class="cat_button" type="submit" value="Faculty"></form>
+        <form action="" method="get"><input class="category_select_value" type="text" name="category_value" id="" value="Guest"><input class="cat_button" type="submit" value="Guest"></form>
+        <form action="" method="get"><input class="category_select_value" type="text" name="category_value" id="" value="Students"><input class="cat_button" type="submit" value="Students"></form>
     </div>
     <div class="separator"></div>
     <?php
