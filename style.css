@@ -322,13 +322,26 @@ strong{
         background-color:gainsboro;
         box-shadow: 0px 0px 2vw gainsboro;
     }
-    .front-page-posts{
+    .front-page-posts{/*
         width: 48%;
+        margin-left:1%;*/
+        width: 32%;
         margin-left:1%;
-        height: 45vw;
+        height: 30em;
         padding: 1vw;
         box-sizing: border-box;
         float: left;
+    }
+    @media only screen and (max-width: 1000px) {
+        .front-page-posts{
+            width: 48%;
+            margin-left:1%;
+        }
+    }
+
+    .front-page-post-excerpt>p{
+        font-size: 15px;
+        color: gray;
     }
     .front-page-posts:hover{
         box-shadow: 0px 0px 2vw gainsboro;
@@ -371,6 +384,16 @@ strong{
         padding: 10vw 20vw 10vw 20vw;
         width: 100vw;
         box-sizing: border-box;
+    }
+    @media only screen and (max-width: 1300px) {
+        .single-postt{
+            padding: 10vw 15vw 10vw 15vw;
+        }
+    }
+    @media only screen and (max-width: 1000px) {
+        .single-postt{
+            padding: 10vw 10vw 10vw 10vw;
+        }
     }
     .individual-page{
         width: 100vw;
