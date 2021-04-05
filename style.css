@@ -214,11 +214,10 @@ strong{
 
 
 @media (orientation: landscape) {
-    html{
-        overflow-x: hidden;
-    }
     header{
         position: absolute;
+        top: 0px;
+        left: 0px;
         height: 17vw;
         width: 100vw;
         box-sizing: border-box;
