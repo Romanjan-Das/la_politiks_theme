@@ -46,27 +46,16 @@
     <div class="separator"></div>
     
     <!------------------------------------------------------------------------------------------------------>
+
     <div class="image_carousel_container">
-        <div class="image_carousel">
+        <div class="mImageCarousel">
             <div>
-                <div><img src="<?php echo get_template_directory_uri(); ?>/images/slide(1).jpg" alt="">
-                    <div>Lorem Ipsum is simply dummy text</div>
-                </div>
-                <div><img src="<?php echo get_template_directory_uri(); ?>/images/slide(2).jpg" alt="">
-                    <div>Lorem Ipsum is simply dummy text</div>
-                </div>
-                <div><img src="<?php echo get_template_directory_uri(); ?>/images/slide(3).jpg" alt="">
-                    <div>Lorem Ipsum is simply dummy text</div>
-                </div>
-                <div><img src="<?php echo get_template_directory_uri(); ?>/images/slide(4).jpg" alt="">
-                    <div>Lorem Ipsum is simply dummy text</div>
-                </div>
-                <div><img src="<?php echo get_template_directory_uri(); ?>/images/slide(5).jpg" alt="">
-                    <div>Lorem Ipsum is simply dummy text</div>
-                </div>
-                <div><img src="<?php echo get_template_directory_uri(); ?>/images/slide(6).jpg" alt="">
-                    <div>Lorem Ipsum is simply dummy text</div>
-                </div>
+                <img src="<?php echo get_template_directory_uri(); ?>/images/slide(1).jpg" alt="">
+                <img src="<?php echo get_template_directory_uri(); ?>/images/slide(2).jpg" alt="">
+                <img src="<?php echo get_template_directory_uri(); ?>/images/slide(3).jpg" alt="">
+                <img src="<?php echo get_template_directory_uri(); ?>/images/slide(4).jpg" alt="">
+                <img src="<?php echo get_template_directory_uri(); ?>/images/slide(5).jpg" alt="">
+                <img src="<?php echo get_template_directory_uri(); ?>/images/slide(6).jpg" alt="">
             </div>
         </div>
     </div>

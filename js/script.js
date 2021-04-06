@@ -10,7 +10,7 @@ window.onload = function () {
     root_.style.setProperty('--moving_text_100', '-' + moving_text.style.width);
 
 
-    
+    /*
     var total_length_of_image_carousel=0;
     for(i=0;i<document.getElementsByClassName("image_carousel")[0].childNodes[1].childNodes.length;i++){
         if(i%2){
@@ -19,6 +19,7 @@ window.onload = function () {
     }
     total_length_of_image_carousel = parseInt(total_length_of_image_carousel);
     document.getElementsByClassName("image_carousel")[0].childNodes[1].style.width=total_length_of_image_carousel+"px";
+*/
 }
 
 var nav_menu_status = false;
