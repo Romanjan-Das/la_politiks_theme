@@ -220,6 +220,8 @@ strong{
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-bottom: 6vw;
+    margin-top: 4vw;
 }
 .category_selector>form{
     display: inline;
@@ -227,8 +229,8 @@ strong{
 
 }
 .cat_button{
-    font-size: 3vw;
-    min-width: 7em;
+    font-size: 5vw;
+    min-width: 4em;
     color: white;
     background-color: rgb(55, 192, 255);
     border-width: 0px;
@@ -238,7 +240,7 @@ strong{
 .select_a_category{
     margin-bottom: 0px;
     margin-top: 7vw;
-    font-size: 3vw;
+    font-size: 5vw;
     width: 100%;
     height: 5vw;
     text-align: center;
@@ -259,8 +261,14 @@ strong{
     margin:0.1%;
     box-shadow: 0px 0px 10px rgb(182, 182, 182);
 }
+#comment{
+    width: 97%;
+}
 
 @media (orientation: landscape) {
+    .category_selector{
+        margin-bottom: 1.7vw;
+    }
     .image_carousel_container{
         position: relative;
         width: 100%;
@@ -286,10 +294,14 @@ strong{
         height: 40px;
         margin-bottom: 20px;
         margin-top: 40px;
-        font-size: 20px;
+        font-size: 26px;
     }
     .cat_button{
-        font-size: 20px;
+        font-size: 26px;
+        min-width: 7em;
+    }
+    .cat_button:hover{
+        background-color: rgb(0, 110, 255);
     }
     body{
         background-color: white;
