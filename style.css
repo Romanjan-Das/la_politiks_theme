@@ -464,23 +464,31 @@ strong{
         display: block;
     }
     .single-postt{
-        padding: 10vw 20vw 10vw 20vw;
-        width: 100vw;
+        padding: 10vw 9vw 10vw 9vw;
         box-sizing: border-box;
     }
-    @media only screen and (max-width: 1300px) {
+    @media only screen and (max-width: 1200px) {
         .single-postt{
-            padding: 10vw 15vw 10vw 15vw;
+            padding: 10vw 7vw 10vw 7vw;
         }
     }
     @media only screen and (max-width: 1000px) {
         .single-postt{
-            padding: 10vw 10vw 10vw 10vw;
+            padding: 10vw 5vw 10vw 5vw;
         }
     }
     .individual-page{
-        width: 100vw;
-        padding: 20vw 20vw 10vw 20vw;
+        padding: 10vw 9vw 10vw 9vw;
         box-sizing: border-box;
+    }
+    @media only screen and (max-width: 1200px) {
+        ..individual-page{
+            padding: 10vw 7vw 10vw 7vw;
+        }
+    }
+    @media only screen and (max-width: 1000px) {
+        .individual-page{
+            padding: 10vw 5vw 10vw 5vw;
+        }
     }
 }
