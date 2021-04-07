@@ -207,6 +207,8 @@ strong{
 /*-----------------------------------------------------------------------------------*/
 .individual-page{
     background-color: white;
+    padding: 7vw 7vw 7vw 7vw;
+    box-sizing: border-box;
 }
 .separator{
     display: none;
@@ -254,7 +256,7 @@ strong{
 }
 .mImageCarousel>div{
     height: inherit;
-    width: 1400px;
+    width: 1700px;
 }
 .mImageCarousel>div>img{
     height: 90%;
@@ -482,7 +484,7 @@ strong{
         box-sizing: border-box;
     }
     @media only screen and (max-width: 1200px) {
-        ..individual-page{
+        .individual-page{
             padding: 10vw 7vw 10vw 7vw;
         }
     }
