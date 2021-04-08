@@ -17,7 +17,7 @@
                 <img class="slides" src="<?php echo get_template_directory_uri(); ?>/images/slide(5).jpg" alt="">
             </div>
             <div class="slide_controls">
-                <div class="slide_control_icon"><img class="slide_control_icon_img"
+                <div class="slide_control_icon"><img onload="set_front_page_height();" class="slide_control_icon_img"
                         src="<?php echo get_template_directory_uri(); ?>/images/slide_left_img.svg" alt=""></div>
                 <div class="slide_control_pointer_bar">
                     <div class="slide_control_pointer_container">
@@ -104,5 +104,16 @@
     </a>
     <?php endwhile;endif; ?>
 </div>
-
+<script>
+    function set_front_page_height(){
+        var sfph= document.body.scrollHeight;
+        var sfphc=document.body.clientHeight;
+        var sfpwc=document.body.clientWidth;
+        console.log(sfph,sfphc,sfpwc);
+        if(sfpwc>sfphc){
+            sfph=sfph+300;
+            document.getElementsByClassName("container")[0].style.height=sfph+"px";
+        }
+    }
+</script>
 <?php get_footer(); ?>
