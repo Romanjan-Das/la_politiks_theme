@@ -521,4 +521,10 @@ strong{
         line-height: 1.8em;
         font-weight: normal;
     }
+    .individual-page-title{
+        font-size: 2em;
+        width: 100%;
+        text-align:center;
+        margin-bottom: 3em;
+    }
 }
