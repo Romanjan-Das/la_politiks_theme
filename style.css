@@ -266,6 +266,20 @@ strong{
 #comment{
     width: 97%;
 }
+.individual-page{
+    color: #404040;
+}
+.single-postt{
+    color: #404040;
+}
+.individual-page{
+    line-height: 1.6em;
+    font-weight: normal;
+}
+.single-postt{
+    line-height: 1.6em;
+    font-weight: normal;
+}
 
 @media (orientation: landscape) {
     .category_selector{
@@ -492,5 +506,19 @@ strong{
         .individual-page{
             padding: 10vw 5vw 10vw 5vw;
         }
+    }
+    .individual-page{
+        color:#404040;
+    }
+    .single-postt{
+        color: #404040;
+    }
+    .individual-page{
+        line-height: 1.8em;
+        font-weight: normal;
+    }
+    .single-postt{
+        line-height: 1.8em;
+        font-weight: normal;
     }
 }
