@@ -280,6 +280,14 @@ strong{
     line-height: 1.6em;
     font-weight: normal;
 }
+.individual-page-title{
+    font-size: 1.7em;
+    width: 100%;
+    text-align:center;
+    line-height: 1.2em;
+    padding-top:2em;
+    margin-bottom: 2em;
+}
 
 @media (orientation: landscape) {
     .category_selector{
@@ -526,5 +534,6 @@ strong{
         width: 100%;
         text-align:center;
         margin-bottom: 3em;
+        padding-top: 0px;
     }
 }
