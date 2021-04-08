@@ -285,8 +285,15 @@ strong{
     width: 100%;
     text-align:center;
     line-height: 1.2em;
-    padding-top:2em;
+    padding-top:1.25em;
     margin-bottom: 2em;
+}
+#colophon{
+    background-color: slategrey;
+    margin: auto;
+    width: 100%;
+    min-height: 15vw;
+    box-sizing: border-box;
 }
 
 @media (orientation: landscape) {
@@ -502,17 +509,17 @@ strong{
         }
     }
     .individual-page{
-        padding: 10vw 9vw 10vw 9vw;
+        padding: 7vw 9vw 10vw 9vw;
         box-sizing: border-box;
     }
     @media only screen and (max-width: 1200px) {
         .individual-page{
-            padding: 10vw 7vw 10vw 7vw;
+            padding: 7vw 7vw 10vw 7vw;
         }
     }
     @media only screen and (max-width: 1000px) {
         .individual-page{
-            padding: 10vw 5vw 10vw 5vw;
+            padding: 7vw 5vw 10vw 5vw;
         }
     }
     .individual-page{
@@ -535,5 +542,23 @@ strong{
         text-align:center;
         margin-bottom: 3em;
         padding-top: 0px;
+    }
+    
+    #colophon{
+        background-color: slategrey;
+        margin: auto;
+        width: 75%;
+        min-height: 15vw;
+        box-sizing: border-box;
+    }
+    @media only screen and (max-width: 1300px) {
+        #colophon{
+            width: 85%;
+        }
+    }
+    @media only screen and (max-width: 1000px) {
+        #colophon{
+            width: 100%;
+        }
     }
 }
