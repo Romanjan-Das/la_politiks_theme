@@ -1,15 +1,49 @@
 <?php get_header(); ?>
+<script>
+    function set_front_page_height(){
+        var sfph= document.body.scrollHeight;
+        if(window.innerWidth>window.innerHeight){
+            document.getElementsByClassName("container")[0].style.height=sfph+"px";
+        }
+    }
+    function set_image_path(){
+        //console.log(document.getElementsByClassName("image-slideshow")[0].childNodes[1].childNodes);
+        var sip_i=1;
+        var sip_j=1;
+        var sip_bool=false;
+        if(window.innerHeight>window.innerWidth){
+            sip_bool=true;
+        }
+
+        for(sip_j=1;sip_j<=Math.trunc(document.getElementsByClassName("image-slideshow")[0].childNodes[1].childNodes.length/2);sip_j++){
+            if(sip_bool){
+                document.getElementsByClassName("image-slideshow")[0].childNodes[1].childNodes[sip_i].src=document.getElementsByClassName("image-slideshow")[0].childNodes[1].childNodes[sip_i].src+"/images/slide("+sip_j+").jpg";
+            }
+            else{
+                document.getElementsByClassName("image-slideshow")[0].childNodes[1].childNodes[sip_i].src=document.getElementsByClassName("image-slideshow")[0].childNodes[1].childNodes[sip_i].src+"/images_wide/slide("+sip_j+").jpg";
+            }
+            
+            sip_i=sip_i+2;
+        }
+    }
+    function load_on_image_load(){
+        set_image_path();
+        set_front_page_height();
+    }
+</script>
+<img style="display:none;" src="<?php echo get_template_directory_uri(); ?>/images/dummy.svg" onload="load_on_image_load();" alt="">
+
 <div class="container">
 
     <div class="the_slideshow_container">
         <!---------------(IMPORTANT!)to modify the slideshow please read all the comment lines---------------->
         <div class="image-slideshow">
             <div>
-                <img src="<?php echo get_template_directory_uri(); ?>/images/slide(1).jpg" alt="">
-                <img src="<?php echo get_template_directory_uri(); ?>/images/slide(2).jpg" alt="">
-                <img src="<?php echo get_template_directory_uri(); ?>/images/slide(3).jpg" alt="">
-                <img src="<?php echo get_template_directory_uri(); ?>/images/slide(4).jpg" alt="">
-                <img src="<?php echo get_template_directory_uri(); ?>/images/slide(5).jpg" alt="">
+                <img src="<?php echo get_template_directory_uri(); ?>" alt="">
+                <img src="<?php echo get_template_directory_uri(); ?>" alt="">
+                <img src="<?php echo get_template_directory_uri(); ?>" alt="">
+                <img src="<?php echo get_template_directory_uri(); ?>" alt="">
+                <img src="<?php echo get_template_directory_uri(); ?>" alt="">
             </div>
         </div>
     </div>
@@ -193,13 +227,4 @@
     </a>
     <?php endwhile;endif; ?>
 </div>
-<script>
-    function set_front_page_height(){
-        var sfph= document.body.scrollHeight;
-        if(window.innerWidth>window.innerHeight){
-            document.getElementsByClassName("container")[0].style.height=sfph+"px";
-        }
-    }
-</script>
-<img style="display:none;" src="<?php echo get_template_directory_uri(); ?>/images/slide_left_img.svg" onload="set_front_page_height()" alt="">
 <?php get_footer(); ?>
