@@ -2,7 +2,7 @@
 window.onload = function () {
     var nav_icon = document.getElementsByClassName("nav_icon")[0];
     nav_icon.addEventListener("click", expand_nav_menu);
-    slideshowInitialise();
+    //slideshowInitialise();
 
     var moving_text = document.getElementsByClassName("moving_text")[0];
     moving_text.style.width = moving_text.clientHeight / 3.8 * moving_text.innerHTML.length + "px";

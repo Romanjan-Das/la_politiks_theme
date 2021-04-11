@@ -1,35 +1,126 @@
 <?php get_header(); ?>
 <div class="container">
-    <div class="the_slideshow_container">
 
-        <!----------------------------------------------Slideshow------------------------------------------------------------------------->
-        <!---Put the slideshow inside a div with predefined dimensions,slideshows dimensions depend on the parent width only-------------->
-        <!---Only one slideshow can be added,and add the slideshowinitialise function to body onload-------------------------------------->
-        <!---Copy the script to the head and place the icon images to the images folder--------------------------------------------------->
-        <div class="css_helper"></div>
-        <div class="css_loader"></div>
-        <div class="image_slideshow" style="display:none;">
-            <div class="slide_container">
-                <img class="slides" src="<?php echo get_template_directory_uri(); ?>/images/slide(1).jpg" alt="">
-                <img class="slides" src="<?php echo get_template_directory_uri(); ?>/images/slide(2).jpg" alt="">
-                <img class="slides" src="<?php echo get_template_directory_uri(); ?>/images/slide(3).jpg" alt="">
-                <img class="slides" src="<?php echo get_template_directory_uri(); ?>/images/slide(4).jpg" alt="">
-                <img class="slides" src="<?php echo get_template_directory_uri(); ?>/images/slide(5).jpg" alt="">
-            </div>
-            <div class="slide_controls">
-                <div class="slide_control_icon"><img onload="set_front_page_height();" class="slide_control_icon_img"
-                        src="<?php echo get_template_directory_uri(); ?>/images/slide_left_img.svg" alt=""></div>
-                <div class="slide_control_pointer_bar">
-                    <div class="slide_control_pointer_container">
-                    </div>
-                </div>
-                <div class="slide_control_icon"><img class="slide_control_icon_img"
-                        src="<?php echo get_template_directory_uri(); ?>/images/slide_right_img.svg" alt=""></div>
+    <div class="the_slideshow_container">
+        <!---------------(IMPORTANT!)to modify the slideshow please read all the comment lines---------------->
+        <div class="image-slideshow">
+            <div>
+                <img src="<?php echo get_template_directory_uri(); ?>/images/slide(1).jpg" alt="">
+                <img src="<?php echo get_template_directory_uri(); ?>/images/slide(2).jpg" alt="">
+                <img src="<?php echo get_template_directory_uri(); ?>/images/slide(3).jpg" alt="">
+                <img src="<?php echo get_template_directory_uri(); ?>/images/slide(4).jpg" alt="">
+                <img src="<?php echo get_template_directory_uri(); ?>/images/slide(5).jpg" alt="">
             </div>
         </div>
-        <!---------------------------------------------------------------------------------------------------->
-
     </div>
+    <div class="image-slideshow-control-panel"></div>
+    <script>
+            var image_slideshow = document.getElementsByClassName("image-slideshow")[0];
+            var image_slideshow_num = image_slideshow.childNodes[1].childNodes.length;
+            var image_slideshow_holder = image_slideshow.childNodes[1];
+            var image_slideshow_count = 1;
+            var image_slideshow_px = -1;
+            var image_slideshow_imgwidth = image_slideshow.clientWidth;
+            var image_slideshow_imgsize;
+            var image_slideshow_interval=3000;
+            var image_slideshow_bool=true;
+            var image_slideshow_width_change_status=true;
+            
+
+            var image_slideshow_timer = setInterval(image_slideshow_timer_function, image_slideshow_interval);
+
+            function image_slideshow_timer_function(){
+                if(image_slideshow_bool){
+                    image_slideshow_control_initialise(); // to remove the control-panel just remove this line
+                    image_slideshow_holder.style.transition = "all 500ms";
+                    image_slideshow_touch_support(); // to remove touch support just remove this line
+                    image_slideshow_bool=false;
+                }
+                if(image_slideshow_imgwidth != image_slideshow.clientWidth){
+                    image_slideshow_width_change_status=true;
+                }
+                if(image_slideshow_width_change_status){
+                    image_slideshow_imgwidth = image_slideshow.clientWidth;
+                    for (image_slideshow_count = 1; image_slideshow_count < image_slideshow_num; image_slideshow_count = image_slideshow_count + 2) {
+                        image_slideshow.childNodes[1].childNodes[image_slideshow_count].style.width = image_slideshow_imgwidth + "px";
+                    }
+                    image_slideshow_imgsize = image_slideshow.childNodes[1].childNodes[1].clientWidth;
+                    image_slideshow_width_change_status=false;
+                }
+                image_slideshow_px++;
+                if (image_slideshow_px >= (image_slideshow_num / 2) - 1) {
+                    image_slideshow_px = 0;
+                }
+                image_slideshow_holder.style.transform = "translateX(-" + image_slideshow_px * image_slideshow_imgsize + "px)";
+                image_slideshow_pointer_location(image_slideshow_px); //to remove the pointer just remove this line
+                
+            }
+
+/* ------------------------------------------the code below is for the image-slideshow-control-panel -------------------------------------------*/
+        var image_slideshow_control_num=Math.trunc(document.getElementsByClassName("image-slideshow")[0].childNodes[1].childNodes.length/2);
+        var image_slideshow_control_i=1;
+        var image_slideshow_control_pointer=[];
+        var image_slideshow_control_inp;
+        function image_slideshow_control_function(image_slideshow_control_inp){
+            clearInterval(image_slideshow_timer);
+            image_slideshow_px=image_slideshow_control_inp-1;
+            image_slideshow_pointer_location(image_slideshow_px); //to remove the pointer update just remove this line <------ remember this !!!
+            image_slideshow_holder.style.transform = "translateX(-" + image_slideshow_px * image_slideshow_imgsize + "px)";
+            image_slideshow_timer = setInterval(image_slideshow_timer_function, image_slideshow_interval);
+        }
+        function image_slideshow_control_initialise(){
+            for(image_slideshow_control_i=1;image_slideshow_control_i<=image_slideshow_control_num;image_slideshow_control_i++){
+                document.getElementsByClassName("image-slideshow-control-panel")[0].innerHTML=document.getElementsByClassName("image-slideshow-control-panel")[0].innerHTML+"<div onclick=\"image_slideshow_control_function("+image_slideshow_control_i+")\">"+image_slideshow_control_i+"</div>";
+            }
+        }
+/*--------------------------------------------the code below is for the image-slideshow-pointer-location-------------------------------------------*/
+        var image_slideshow_pointer_pointer;
+        var image_slideshow_pointer_memory=0;
+        function image_slideshow_pointer_location(image_slideshow_pointer_pointer){
+            document.getElementsByClassName("image-slideshow-control-panel")[0].childNodes[image_slideshow_pointer_memory].style.border="0px solid grey";
+            image_slideshow_pointer_memory=image_slideshow_pointer_pointer;
+            document.getElementsByClassName("image-slideshow-control-panel")[0].childNodes[image_slideshow_pointer_pointer].style.border="0.1em solid grey";
+        }
+/*--------------------------------------------the code below is for touch support----------------------------------------------------------------*/
+        var image_slideshow_touchX=0;
+        var image_slideshow_touchstatus=true;
+        function image_slideshow_touch_support(){
+            image_slideshow.addEventListener('touchstart',image_slideshow_touchstart,false);
+            image_slideshow.addEventListener('touchmove',image_slideshow_touchmove,false);
+            image_slideshow.addEventListener('touchend',image_slideshow_touchend,false);
+
+        }
+        function image_slideshow_touchstart(image_slideshow_event){
+            clearInterval(image_slideshow_timer);
+            image_slideshow_touchX=image_slideshow_event.touches[0].clientX;
+        }
+        function image_slideshow_touchend(){
+            image_slideshow_timer = setInterval(image_slideshow_timer_function, image_slideshow_interval);
+            image_slideshow_touchstatus=true;
+        }
+        function image_slideshow_touchmove(image_slideshow_event){
+            //image_slideshow_touchX = image_slideshow_event.touches[0].clientX;
+            //console.log(image_slideshow_touchX);
+            if((image_slideshow_event.touches[0].clientX>image_slideshow_touchX+image_slideshow_imgwidth/5)&&image_slideshow_touchstatus){
+                if(image_slideshow_px==0){
+                    image_slideshow_control_function(1);
+                }
+                else{
+                    image_slideshow_control_function(image_slideshow_px);
+                }
+                image_slideshow_touchstatus=false;
+            }
+            if((image_slideshow_event.touches[0].clientX<image_slideshow_touchX-image_slideshow_imgwidth/5)&&image_slideshow_touchstatus){
+                if(image_slideshow_px<Math.trunc(image_slideshow_num/2)-2){
+                    image_slideshow_control_function(image_slideshow_px+2);
+                }
+                else if(image_slideshow_px==Math.trunc(image_slideshow_num/2)-2){
+                    image_slideshow_control_function(Math.trunc(image_slideshow_num/2));
+                }
+                image_slideshow_touchstatus=false;
+            }
+        }
+    </script>
 
     <div class="separator"></div>
 

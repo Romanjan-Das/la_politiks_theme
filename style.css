@@ -15,7 +15,7 @@
     height: 1.6rem;
     margin-bottom: 0.8rem;
     overflow: hidden;
-    background-color: white;
+    background-color: gainsboro;
 }
 
 .moving_text {
@@ -295,6 +295,55 @@ strong{
     min-height: 15vw;
     box-sizing: border-box;
 }
+.image-slideshow {
+    width: inherit;
+    height: inherit;
+    overflow: hidden;
+    animation: image-slideshow-loading 2s 10;
+}
+@keyframes image-slideshow-loading {
+    0%{background-color:gainsboro;}
+    50%{background-color:white;}
+    100%{background-color:gainsboro;}
+}
+
+.image-slideshow>div {
+    height: inherit;
+    width: 4000px;
+}
+@media(orientation:landscape){
+    .image-slideshow>div{
+        width: 10000px;
+    }
+}
+
+.image-slideshow>div>img {
+    height: inherit;
+    float: left;
+
+}
+.image-slideshow-control-panel{
+    width: 100%;
+    height: auto;
+    margin-top: 10px;
+    /*background-color: gainsboro;*/
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+@media(orientation:portrait){
+    .image-slideshow-control-panel{
+        margin-bottom: 2em;
+    }
+}
+.image-slideshow-control-panel>div{
+    display:inline;
+    margin:0.25em;
+    padding: 0.25em 0.5em 0.25em 0.5em;
+    /*border: 0.1em solid rgb(236, 236, 236);*/
+    /*border-radius: 50%;*/
+    background-color: rgb(236, 236, 236);
+}
 
 @media (orientation: landscape) {
     .category_selector{
@@ -436,8 +485,8 @@ strong{
     .the_slideshow_container{
         z-index: 0;
         position: relative;
-        width:50vw;
-        height:auto;
+        width:100%;
+        height:30vw;
         margin: auto;
         background-color:gainsboro;
         box-shadow: 0px 0px 2vw gainsboro;
