@@ -1,21 +1,11 @@
 <?php get_header(); ?>
 <div class="container">
-    <script>
-        function set_front_page_height(){
-            var sfph= document.body.scrollHeight;
-            console.log(window.innerHeight,window.innerWidth,sfph);
-            if(window.innerWidth>window.innerHeight){
-                //sfph=sfph+50;
-                document.getElementsByClassName("container")[0].style.height=sfph+"px";
-            }
-        }
-    </script>
 
     <div class="the_slideshow_container">
         <!---------------(IMPORTANT!)to modify the slideshow please read all the comment lines---------------->
         <div class="image-slideshow">
             <div>
-                <img src="<?php echo get_template_directory_uri(); ?>/images/slide(1).jpg" onload="set_front_page_height();" alt=""><!------this function is not related to the slideshow in any way------->
+                <img src="<?php echo get_template_directory_uri(); ?>/images/slide(1).jpg" alt="">
                 <img src="<?php echo get_template_directory_uri(); ?>/images/slide(2).jpg" alt="">
                 <img src="<?php echo get_template_directory_uri(); ?>/images/slide(3).jpg" alt="">
                 <img src="<?php echo get_template_directory_uri(); ?>/images/slide(4).jpg" alt="">
@@ -203,5 +193,13 @@
     </a>
     <?php endwhile;endif; ?>
 </div>
-
+<script>
+    function set_front_page_height(){
+        var sfph= document.body.scrollHeight;
+        if(window.innerWidth>window.innerHeight){
+            document.getElementsByClassName("container")[0].style.height=sfph+"px";
+        }
+    }
+</script>
+<img style="display:none;" src="<?php echo get_template_directory_uri(); ?>/images/slide_left_img.svg" onload="set_front_page_height()" alt="">
 <?php get_footer(); ?>
