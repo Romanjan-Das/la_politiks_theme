@@ -91,11 +91,9 @@
 
         }
         function image_slideshow_touchstart(image_slideshow_event){
-            clearInterval(image_slideshow_timer);
             image_slideshow_touchX=image_slideshow_event.touches[0].clientX;
         }
         function image_slideshow_touchend(){
-            image_slideshow_timer = setInterval(image_slideshow_timer_function, image_slideshow_interval);
             image_slideshow_touchstatus=true;
         }
         function image_slideshow_touchmove(image_slideshow_event){
