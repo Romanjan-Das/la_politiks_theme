@@ -11,7 +11,8 @@
 <header>
     <div class="header_title">
         <img src="<?php echo get_template_directory_uri();?>/images/academic_logo_1.jpg" alt="">
-        <div class="header_title_text"><div>La Politiks</div></div>
+        <div class="header_title_text"><div><?php bloginfo('name');?></div><div class="header_title_description"><?php bloginfo('description');?></div></div>
+        
         <img src="<?php echo get_template_directory_uri();?>/images/academic_logo_2.jpg" alt="">
         <div class="nav_icon">
             <img src="<?php echo get_template_directory_uri();?>/images/hamburger_icon.svg" alt="">

@@ -127,9 +127,10 @@ header::-webkit-scrollbar{
 }
 .header_title_text>div{
     display: flex;
-    height: 14vw;
     align-items: center;
     justify-content: center;
+    height: 14vw;
+    width: 100%;
     
 }
 .header_title>img{
@@ -344,7 +345,10 @@ strong{
     /*border-radius: 50%;*/
     background-color: rgb(236, 236, 236);
 }
-
+.header_title_description{
+    pointer-events: none;
+    color:rgba(255, 255, 255, 0);
+}
 @media (orientation: landscape) {
     .category_selector{
         margin-bottom: 1.7vw;
@@ -415,13 +419,19 @@ strong{
         width: 70vw;
         height: 13vw;
         font-size: 3.5rem;
+        display: grid;
+        place-items: center;
     }
     .header_title_text>div{
-        display: flex;
-        height: 12vw;
-        align-items: center;
-        justify-content: center;
+        width: 100%;
+        height: auto;
         
+    }
+    .header_title_description{
+        width:100%;
+        font-size: 1rem;
+        pointer-events: none;
+        color:darkslategrey;
     }
     .nav_icon{
         display: none;
