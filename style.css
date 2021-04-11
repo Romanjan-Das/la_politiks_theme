@@ -15,7 +15,7 @@
     height: 1.6rem;
     margin-bottom: 0.8rem;
     overflow: hidden;
-    background-color: gainsboro;
+    background-color: white;
 }
 
 .moving_text {
@@ -72,14 +72,15 @@
 }
 /*-------------------------------------------------------------------------------------*/
 body{
-    background-color: gainsboro;
+    background-color: white;
     margin: 0rem;
 }
 header{
     position: fixed;
     z-index: 1;
     top: 0rem;
-    background-color: slategrey;
+    background-color: white;
+    border-bottom: 1px solid rgb(194, 194, 194);
     width: 100vw;
     height: 15vw;
     font-size: 1rem;
@@ -99,24 +100,25 @@ header::-webkit-scrollbar{
     color: black;
     text-decoration:none;
 }
-
 #menu-primary{
     margin: 0px;
     margin-top: 15vw;
+    background-color: white;
 }
 #menu-primary>li{
     list-style-type: none;
     padding: 1rem 0rem 1rem 0rem;
 }
 #menu-primary>li>a{
-    color: white;
+    color: black;
     text-decoration: none;
 }
 .header_title{
     width: inherit;
     height: inherit;
-    color: white;
+    color: black;
     box-sizing:border-box;
+    background-color: white;
 }
 .header_title_text{
     position: absolute;
@@ -161,6 +163,7 @@ header::-webkit-scrollbar{
     margin-top: 1rem;
     padding: 0.5rem;
     box-sizing: border-box;
+    box-shadow: 0px 0px 2vw rgb(185, 185, 185);
 }
 .front-page-posts:nth-child(1){
     margin-top: 0.5rem;
@@ -175,6 +178,9 @@ header::-webkit-scrollbar{
 .front-page-post-excerpt{
     font-size: 0.8rem;
     color: grey;
+}
+.front-page-post-excerpt>p{
+    font-size: 0.7rem;
 }
 .the_slideshow_container{
     z-index: 0;
@@ -253,7 +259,7 @@ strong{
     width: inherit;
     overflow-y: hidden;
     overflow-x: scroll;
-    background-color: gainsboro;
+    background-color: white;
 }
 .mImageCarousel>div{
     height: inherit;
@@ -290,7 +296,7 @@ strong{
     margin-bottom: 2em;
 }
 #colophon{
-    background-color: slategrey;
+    background-color: darkslategrey;
     margin: auto;
     width: 100%;
     min-height: 15vw;
@@ -466,6 +472,7 @@ strong{
         box-sizing: border-box;
     }
     #menu-primary>li>a{
+        color:white;
         font-size: 18px;
     }
     #menu-primary>li>a:hover{
@@ -509,6 +516,7 @@ strong{
         height: 30em;
         padding: 1vw;
         box-sizing: border-box;
+        box-shadow: 0px 0px 0px white;
         float: left;
     }
     @media only screen and (max-width: 1000px) {
@@ -604,7 +612,7 @@ strong{
     }
     
     #colophon{
-        background-color: slategrey;
+        background-color: darkslategrey;
         margin: auto;
         width: 75%;
         min-height: 15vw;
