@@ -1,0 +1,1 @@
+* the custom images are stored in : "wp-content/uploads/custom_img/"

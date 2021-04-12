@@ -220,9 +220,12 @@ strong{
     padding: 7vw 7vw 7vw 7vw;
     box-sizing: border-box;
 }
-.individual-page ol{
-    padding-inline-start: 1em;
+@media(orientation:portrait){
+    .individual-page ol{
+        padding-inline-start: 1em;
+    }
 }
+
 .separator{
     display: none;
 }
@@ -492,6 +495,7 @@ strong{
         font-size: 1rem;
         pointer-events: none;
         color:darkslategrey;
+        font-weight: bold;
     }
     .nav_icon{
         display: none;

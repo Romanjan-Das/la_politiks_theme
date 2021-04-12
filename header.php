@@ -9,11 +9,12 @@
 </head>
 <body <?php body_class(); ?>>
 <header>
+    <?php $wp_content_url = site_url()."/wp-content/uploads/custom_img/";?>
     <div class="header_title">
-        <img src="<?php echo get_template_directory_uri();?>/images/academic_logo_1.jpg" alt="">
+        <img src="<?php echo $wp_content_url;?>logos/academic_logo_1.jpg" alt="">
         <div class="header_title_text"><div class="header_title_text_title"><?php bloginfo('name');?></div><div class="header_title_description"><?php bloginfo('description');?></div></div>
         
-        <img src="<?php echo get_template_directory_uri();?>/images/academic_logo_2.jpg" alt="">
+        <img src="<?php echo $wp_content_url;?>logos/academic_logo_2.jpg" alt="">
         <div class="nav_icon">
             <img src="<?php echo get_template_directory_uri();?>/images/hamburger_icon.svg" alt="">
         </div>

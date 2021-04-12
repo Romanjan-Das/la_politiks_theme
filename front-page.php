@@ -1,4 +1,5 @@
 <?php get_header(); ?>
+<?php $wp_content_url = site_url()."/wp-content/uploads/custom_img/";?>
 <script>
     function moving_text_function(){
         
@@ -25,10 +26,10 @@
 
         for(sip_j=1;sip_j<=Math.trunc(document.getElementsByClassName("image-slideshow")[0].childNodes[1].childNodes.length/2);sip_j++){
             if(sip_bool){
-                document.getElementsByClassName("image-slideshow")[0].childNodes[1].childNodes[sip_i].src=document.getElementsByClassName("image-slideshow")[0].childNodes[1].childNodes[sip_i].src+"/images/slide("+sip_j+").jpg";
+                document.getElementsByClassName("image-slideshow")[0].childNodes[1].childNodes[sip_i].src=document.getElementsByClassName("image-slideshow")[0].childNodes[1].childNodes[sip_i].src+"slideshow/images/slide("+sip_j+").jpg";
             }
             else{
-                document.getElementsByClassName("image-slideshow")[0].childNodes[1].childNodes[sip_i].src=document.getElementsByClassName("image-slideshow")[0].childNodes[1].childNodes[sip_i].src+"/images_wide/slide("+sip_j+").jpg";
+                document.getElementsByClassName("image-slideshow")[0].childNodes[1].childNodes[sip_i].src=document.getElementsByClassName("image-slideshow")[0].childNodes[1].childNodes[sip_i].src+"slideshow/images_wide/slide("+sip_j+").jpg";
             }
             
             sip_i=sip_i+2;
@@ -48,11 +49,11 @@
         <!---------------(IMPORTANT!)to modify the slideshow please read all the comment lines---------------->
         <div class="image-slideshow">
             <div>
-                <img src="<?php echo get_template_directory_uri(); ?>" alt="">
-                <img src="<?php echo get_template_directory_uri(); ?>" alt="">
-                <img src="<?php echo get_template_directory_uri(); ?>" alt="">
-                <img src="<?php echo get_template_directory_uri(); ?>" alt="">
-                <img src="<?php echo get_template_directory_uri(); ?>" alt="">
+                <img src="<?php echo $wp_content_url; ?>" alt="">
+                <img src="<?php echo $wp_content_url; ?>" alt="">
+                <img src="<?php echo $wp_content_url; ?>" alt="">
+                <img src="<?php echo $wp_content_url; ?>" alt="">
+                <img src="<?php echo $wp_content_url; ?>" alt="">
             </div>
         </div>
     </div>
@@ -182,12 +183,12 @@
     <div class="image_carousel_container">
         <div class="mImageCarousel">
             <div>
-                <img src="<?php echo get_template_directory_uri(); ?>/images/slide(1).jpg" alt="">
-                <img src="<?php echo get_template_directory_uri(); ?>/images/slide(2).jpg" alt="">
-                <img src="<?php echo get_template_directory_uri(); ?>/images/slide(3).jpg" alt="">
-                <img src="<?php echo get_template_directory_uri(); ?>/images/slide(4).jpg" alt="">
-                <img src="<?php echo get_template_directory_uri(); ?>/images/slide(5).jpg" alt="">
-                <img src="<?php echo get_template_directory_uri(); ?>/images/slide(6).jpg" alt="">
+                <img src="<?php echo $wp_content_url; ?>carousel/slide(1).jpg" alt="">
+                <img src="<?php echo $wp_content_url; ?>carousel/slide(2).jpg" alt="">
+                <img src="<?php echo $wp_content_url; ?>carousel/slide(3).jpg" alt="">
+                <img src="<?php echo $wp_content_url; ?>carousel/slide(4).jpg" alt="">
+                <img src="<?php echo $wp_content_url; ?>carousel/slide(5).jpg" alt="">
+                <img src="<?php echo $wp_content_url; ?>carousel/slide(6).jpg" alt="">
             </div>
         </div>
     </div>
