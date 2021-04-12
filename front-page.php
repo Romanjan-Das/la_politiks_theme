@@ -1,5 +1,13 @@
 <?php get_header(); ?>
 <script>
+    function moving_text_function(){
+        
+    var moving_text = document.getElementsByClassName("moving_text")[0];
+    moving_text.style.width = moving_text.clientHeight / 3.8 * moving_text.innerHTML.length + "px";
+    var root_ = document.querySelector(':root');
+    root_.style.setProperty('--moving_text_100', '-' + moving_text.style.width);
+
+    }
     function set_front_page_height(){
         var sfph= document.body.scrollHeight;
         if(window.innerWidth>window.innerHeight){
@@ -29,6 +37,7 @@
     function load_on_image_load(){
         set_image_path();
         set_front_page_height();
+        moving_text_function();
     }
 </script>
 <img style="display:none;" src="<?php echo get_template_directory_uri(); ?>/images/dummy.svg" onload="load_on_image_load();" alt="">

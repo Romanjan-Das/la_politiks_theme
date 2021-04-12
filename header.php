@@ -11,7 +11,7 @@
 <header>
     <div class="header_title">
         <img src="<?php echo get_template_directory_uri();?>/images/academic_logo_1.jpg" alt="">
-        <div class="header_title_text"><div><?php bloginfo('name');?></div><div class="header_title_description"><?php bloginfo('description');?></div></div>
+        <div class="header_title_text"><div class="header_title_text_title"><?php bloginfo('name');?></div><div class="header_title_description"><?php bloginfo('description');?></div></div>
         
         <img src="<?php echo get_template_directory_uri();?>/images/academic_logo_2.jpg" alt="">
         <div class="nav_icon">
