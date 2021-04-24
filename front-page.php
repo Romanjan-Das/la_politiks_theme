@@ -9,6 +9,9 @@
     root_.style.setProperty('--moving_text_100', '-' + moving_text.style.width);
 
     }
+    setTimeout(() => {
+        set_front_page_height();
+    }, 100);
     function set_front_page_height(){
         var sfph= document.body.scrollHeight;
         if(window.innerWidth>window.innerHeight){
