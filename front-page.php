@@ -194,8 +194,8 @@
     </div>
     <!-------------------------------------------------------------------------------------------------------->
 
-
-    <div class="separator"></div>
+    <!-----
+    <div class="separator"></div> ---->
     <div class="select_a_category">Select a category</div>
     <div class="category_selector">
         <form action="" method="get"><input class="category_select_value" type="text" name="category_value" id="" value=""><input class="cat_button" type="submit" value="All"></form>
