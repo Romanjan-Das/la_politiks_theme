@@ -472,7 +472,21 @@ strong{
     color:rgba(255, 255, 255, 0);
 }
 .footer-copyright{
-    color:white;padding:4rem;
+    color:white;
+    margin-top:2rem;
+}
+#colophon{
+    font-size:0.9rem;
+    padding: 1rem;
+    box-sizing:border-box;
+    color:white;
+}
+#colophon a{
+    color:white;
+    text-decoration:none;
+}
+.footer-navigation ul{
+    padding-left:0.5rem;
 }
 @media(orientation:portrait){.footer-copyright{padding:2rem 1rem 2rem 1rem;}}
 @media (orientation: landscape) {

@@ -32,6 +32,7 @@ add_image_size('largest',500,500,true);
 register_nav_menus(
     array(
         'top-menu'=>__('Top menu','theme'),
-        'footer-menu'=>__('Footer menu','theme')
+        'footer-menu'=>__('Footer menu','theme'),
+        'social'=>__('Social menu','theme')
     )
 );
