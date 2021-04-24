@@ -6,7 +6,73 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 18px;
 }
+/*-----------------------flex-container-styiling-----------------------------*/
+.flex-container{
+	display:flex;
+	flex-wrap:wrap;
+}
+.flex-container>div{
+	width:20%;
+	margin:6.6%;
+}
+.flex-container>div>img{
+	width:100%;
+}
+.flex-container>div>div{
+	font-size:0.9rem;
+	width:100%;
+	text-align:center;
+}
+.flex-container>div:hover{
+	box-shadow: 0px 1rem 1rem gainsboro;
+}
+@media (orientation:portrait){
+	.flex-container>div:hover{
+	box-shadow: 0px 0rem 0rem white;
+}
+}
+@media only screen and (max-width: 1000px) {
+  .flex-container>div{
+	width:23%;
+	margin: 5%;
+}
+}
+@media(orientation:portrait){
+.flex-container>div{
+	width:35%;
+	margin:auto;
+}
+.flex-container>div>div{
+	font-size:0.7rem;
+	width:100%;
+	margin-bottom:1.2rem;
+	text-align:center;
+}
+}
+/*--------------------wp-block-table  styling-----------------------------*/
+.wp-block-table{
+	width:100%;
+	margin:0px;
+}
+.wp-block-table td,tr,th{
+	background-color:white;
+}
+.wp-block-table td{
+	width:40%;
+	box-sizing:border-box;
+}
+@media(orientation:landscape){
+.wp-block-table td{
+	width:auto;
+	
+}
+}
+.wp-block-table strong{
+	font-size:1rem;
+}
+
 /*--------------------------------------------------------------------*/
+
 .moving_text_container {
     position: relative;
     z-index: 0;
@@ -686,4 +752,9 @@ strong{
             width: 100%;
         }
     }
+}
+
+/****************************/
+.image_carousel_container{
+	display:none;
 }
