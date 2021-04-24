@@ -474,6 +474,8 @@ strong{
 .footer-copyright{
     color:white;
     margin-top:2rem;
+    padding-left:2.1rem;
+    margin-bottom:2rem;
 }
 #colophon{
     font-size:0.9rem;
@@ -485,10 +487,41 @@ strong{
     color:white;
     text-decoration:none;
 }
-.footer-navigation ul{
-    padding-left:0.5rem;
+.menu-footer-menu-container{
+    padding-left:1rem;
 }
-@media(orientation:portrait){.footer-copyright{padding:2rem 1rem 2rem 1rem;}}
+/***********************social icons******************/
+.menu-social-container{
+    width:100%;
+    height: 2rem;
+    margin-top:1.5rem;
+    margin-bottom:1rem;
+}
+.social-icons li::marker{color:#40404000;}
+.social-icons li a[href*="facebook.com"]::before{content:url(http://localhost/arsdrepublica/wp-content/uploads/custom_img/social_icons/facebook-brands.svg);}
+.social-icons li a[href*="twitter.com"]::before{content:url(http://localhost/arsdrepublica/wp-content/uploads/custom_img/social_icons/twitter-brands.svg);}
+.social-icons li a[href*="instagram.com"]::before{content:url(http://localhost/arsdrepublica/wp-content/uploads/custom_img/social_icons/instagram-brands.svg);}
+.social-icons li{
+    width:1.5rem;
+    margin-right: 1rem;
+    float:left;
+}
+/*****************************************************/
+/*@media(orientation:portrait){.footer-copyright{padding:2rem 1rem 2rem 1rem;}}*/
+@media(orientation:portrait){
+    .footer-copyright{
+        padding-left:1rem;
+    }
+    .menu-footer-menu-container{
+        padding-left:0rem;
+    }
+    .menu-social-container{
+        transform: translateX(-1rem);
+    }
+    #colophon{
+        margin-top:1rem;
+    }
+}
 @media (orientation: landscape) {
     .category_selector{
         margin-bottom: 1.7vw;
