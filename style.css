@@ -828,3 +828,17 @@ strong{
         margin-top:4rem;
     }
 }
+@media(orientation:portrait){
+    .single-postt p{
+        line-height: 1.6rem;
+        font-size:0.88rem;
+    }
+    .individual-page p{
+        line-height: 1.6rem;
+        font-size:0.88rem;
+    }
+    .individual-page strong{
+        line-height: 1.6rem;
+        font-size:0.88rem;
+    }
+}
