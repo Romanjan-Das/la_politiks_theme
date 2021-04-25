@@ -13,7 +13,7 @@
         set_front_page_height();
     }, 100);
     function set_front_page_height(){
-        var sfph= document.body.scrollHeight;
+        var sfph= document.body.scrollHeight-300;
         if(window.innerWidth>window.innerHeight){
             document.getElementsByClassName("container")[0].style.height=sfph+"px";
         }
@@ -40,7 +40,7 @@
     }
     function load_on_image_load(){
         set_image_path();
-        set_front_page_height();
+        //set_front_page_height();
         moving_text_function();
     }
 </script>
